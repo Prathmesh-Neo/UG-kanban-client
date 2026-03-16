@@ -1,24 +1,7 @@
-// import axios from "axios";
-
-// const axiosInstance = axios.create({
-//   baseURL: "http://localhost:3000/api", 
-//   timeout: 10000,
-//   headers: {
-//     "Content-Type": "application/json",
-//   },
-// });
-
-// const token = localStorage.getItem("token");
-
-// if (token) {
-//   axiosInstance.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-// }
-// export default axiosInstance;
-
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "http://localhost:3000/api",
+  baseURL: "https://ug-server.vercel.app/api",
   timeout: 10000,
   headers: {
     "Content-Type": "application/json",
