@@ -20,7 +20,7 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      const res = await axiosInstance.post("/auth/register");
+      const res = await axiosInstance.post("/auth/register",formData);
 
       alert(res.data.message);
 
