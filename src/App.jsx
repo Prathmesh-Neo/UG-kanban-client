@@ -21,22 +21,22 @@ function App() {
 
       <Routes>
 
-        {/* {!user && ( */}
+        {!user && (
           <>
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="*" element={<Navigate to="/login" />} />
           </>
-        {/* )} */}
+         )} 
 
-        {/* {user && ( */}
+        {user && (
           <>
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/analytics" element={<Analytics />} />
             <Route path="/create-task" element={<CreateTask />} />
             <Route path="*" element={<Navigate to="/dashboard" />} />
           </>
-        {/* )} */}
+        )} 
 
       </Routes>
     </>

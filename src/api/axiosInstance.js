@@ -25,24 +25,24 @@ axiosInstance.interceptors.request.use(
   (error) => Promise.reject(error)
 );
 
-// Handle 401 globally
+
 axiosInstance.interceptors.response.use(
   (response) => response,
   (error) => {
 
-    if (error.response?.status === 401) {
+    const token = localStorage.getItem("token");
 
-      // remove auth data
+    if (error.response?.status === 401 && token) {
+
+      // clear auth
       localStorage.removeItem("token");
       localStorage.removeItem("user");
 
-      // redirect to login
+      // redirect
       window.location.href = "/login";
-
     }
 
     return Promise.reject(error);
-
   }
 );
 
